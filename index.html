@@ -12,138 +12,135 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-  }
+   }
 
   html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  background: #f2f2f2;
-}
+             width: 100%;
+             max-width: 100%;
+             overflow-x: hidden;
+             background: #f2f2f2;
+             }
 
   /* HEADER */
   header {
-    background: #4facfe;
-    color: white;
-    padding: 15px 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+         background: #4facfe;
+         color: white;
+         padding: 15px 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         }
   
   nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 14px;
-  }
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 14px;
+        }
 
   nav a:hover {
-    text-decoration: underline;
-  }
+            text-decoration: underline;
+             }
 
   /* HERO */
   .hero {
-    background: linear-gradient(to right, #4facfe, #00c6ff);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-  }
+        background: linear-gradient(to right,
+        #4facfe,   #00c6ff);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        }
 
   .hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
+          font-size: 32px;
+          margin-bottom: 10px;
+           }
   header, .hero, .container {
-  width: 100%;
-  max-width: 100%;
-}
+                           width: 100%;
+                           max-width: 100%;
+                           }
 
   /* PRODUK */
   .container {
-    padding: 20px;
-  }
+             padding: 20px;
+            }
 
   .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-  }
+           display: grid;
+           grid-template-columns: repeat(auto-fit,      minmax(150px, 1fr));
+           gap: 15px;
+           }
 
   .card {
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    
-  }
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        }
 
   .card:hover {
-    transform: translateY(-5px);
-  }
+           transform: translateY(-5px);
+            }
 
   .card img {
-    width: 100%;
-    border-radius: 8px;
-  }
+           width: 100%;
+           border-radius: 8px;
+           }
 
   .card h3 {
-    margin: 8px 0;
-    font-size: 14px;
-  }
+          margin: 8px 0;
+         font-size: 14px;
+         }
 
   .card p {
-    color: green;
-    font-weight: bold;
-  }
+         color: green;
+         font-weight: bold;
+         }
 
   /* FOOTER */
   footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-  }
+         background: #333;
+         color: white;
+         text-align: center;
+         padding: 15px;
+         margin-top: 20px;
+         }
+  
   .btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 5px 15px;
-  background: green;
-  color: white;
-  border-radius: 15px;
-  text-decoration: none;
-  font-size: 12px;
-}
+       display: inline-block;
+       margin-top: 8px;
+       padding: 5px 15px;
+       background: green;
+       color: white;
+       border-radius: 15px;
+       text-decoration: none;
+       font-size: 12px;
+       }
+
 /* HAMBURGER */
 .menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            }
 
 /* MODE HP */
 @media (max-width: 768px) {
 
   nav {
-    position: fixed;
-    top: 60px;
-    right: 0;
-
-    background: #4facfe;
-    width: 200px;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-
-    transform: translateX(100%);
-    transition: 0.3s;
-  }
+      position: fixed;
+      top: 60px;
+      right: 0;
+      background: #4facfe;
+      width: 200px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: 0.3s;
+     }
 
   nav.active {
     transform: translateX(0);
@@ -222,7 +219,8 @@ nav.active {
     padding: 10px;
     display: block;
   }
-  Css
+ 
+ 
 form {
   background: white;
   padding: 15px;
@@ -238,6 +236,23 @@ form textarea {
   border-radius: 5px;
 }
 
+.qty-btn {
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  background: #66BB6A;
+  color: white;
+  cursor: pointer;
+}
+
+.qty-btn:active {
+  transform: scale(0.95);
+}
+
   </style>
 </head>
 
@@ -245,21 +260,14 @@ form textarea {
     
 <header>
   <h2>HIDAYAH BAKSO SOLO</h2>
-<ul class="nav-menu" id="navMenu">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Produk</a></li>
-  <li><a href="#">Tentang</a></li>
-  <li><a href="#">Kontak</a></li>
-</ul>
   <!-- Tombol Hamburger -->
   <div class="menu-toggle" id="menu-toggle">
     ☰
   </div>
-  
-  <nav id="nav-menu">
-    <a href="#">Home</a>
-    <a href="#">Produk</a>
-    <a href="#">Kontak</a>
+     <nav id="nav-menu">
+     <a href="#">Home</a>
+     <a href="#">Produk</a>
+     <a href="#">Kontak</a>
   </nav>
 </header>
 
@@ -276,6 +284,7 @@ form textarea {
   <input type="text" id="pesanan" placeholder="Pesanan" required><br><br>
 
   <textarea id="alamat" placeholder="Alamat" required></textarea><br><br>
+  <input type="text" id="total" placeholder="Total Harga" readonly><br><br>
 
   <button type="submit" class="btn">Kirim Pesanan</button>
 
@@ -290,114 +299,239 @@ form textarea {
 
   <div class="products">
 
-    <div class="card">
-      <img src="baksosuper.jpg" alt="bakso super">
-      <h3>bakso super</h3>
+    <!-- Bakso Super -->
+    <div class="card" data-nama="bakso super" data-harga="25000">
+
+      <img src="baksosuper.jpg">
+      <h3>Bakso Super</h3>
       <p>Rp 25.000</p>
-      <button onclick="pilihproduk('Bakso Super')">Pesan</button>
+
+      <div class="qty">
+        <button class="qty-btn" onclick="kurang(this)">-</button>
+        <span>0</span>
+        <button class="qty-btn" onclick="tambah(this)">+</button>
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="baksourat.jpg" alt="bakso urat">
-      <h3>bakso urat</h3>
+    <!-- Bakso Urat -->
+    <div class="card" data-nama="bakso urat" data-harga="15000">
+
+      <img src="baksourat.jpg">
+      <h3>Bakso Urat</h3>
       <p>Rp 15.000</p>
-      <button onclick="pilihproduk('bakso urat')">pesan</button>
-      
+
+      <div class="qty">
+        <button class="qty-btn" onclick="kurang(this)">-</button>
+        <span>0</span>
+        <button class="qty-btn" onclick="tambah(this)">+</button>
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="baksotelor.jpg" alt="bakso telor">
-      <h3>bakso telor</h3>
+    <!-- Bakso Telor -->
+    <div class="card" data-nama="bakso telor" data-harga="15000">
+
+      <img src="baksotelor.jpg">
+      <h3>Bakso Telor</h3>
       <p>Rp 15.000</p>
-      <button onclick="pilihproduk('bakso telor')">pesan</button>
+
+      <div class="qty">
+        <button class="qty-btn" onclick="kurang(this)">-</button>
+        <span>0</span>
+        <button class="qty-btn" onclick="tambah(this)">+</button>
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="comingsoon.jpg" alt="comingsoon">
-      <h3>mi ayam</h3>
-      <p>Rp 13.000</p>
-    </div>
-    <div class="card">
-    <img src="comingsoon.jpg" alt="comingsoon">
-    <h3>nasi soto</h3>
-    <p>Rp 15.000</p>
-    </div>
   </div>
-  <a href="https://wa.me/6289635900532?text=Halo%20saya%20mau%20pesan%20bakso%20super" class="btn">
-  Pesan
-</a>
+
+</section>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Hidayah Group</p>
+</footer>
 <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  /* ================= HAMBURGER ================= */
   const toggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav-menu");
 
-  toggle.addEventListener("click", function () {
-    nav.classList.toggle("active");
-  });
-</script>
-<script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("active");
-}
-</script>
-<script>
-document.getElementById("orderForm").addEventListener("submit", function(e){
+  if(toggle && nav){
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
 
-  e.preventDefault();
+  /* ================= FORM ================= */
+  const form = document.getElementById("orderForm");
 
-  let nama = document.getElementById("nama").value;
-  let pesanan = document.getElementById("pesanan").value;
-  let alamat = document.getElementById("alamat").value;
+  if(form){
 
-  let pesan = 
-  "Halo, saya mau pesan:%0A" +
-  "Nama: " + nama + "%0A" +
-  "Pesanan: " + pesanan + "%0A" +
-  "Alamat: " + alamat;
+    form.addEventListener("submit", function(e){
 
-  let wa = "https://wa.me/6289635900532?text=" + pesan;
+      e.preventDefault();
 
-  window.open(wa, "_blank");
+      const nama = document.getElementById("nama").value;
+      const pesanan = document.getElementById("pesanan").value;
+      const alamat = document.getElementById("alamat").value;
+      const totalInput = document.getElementById("total");
+
+      const harga = {
+        "bakso super": 25000,
+        "bakso urat": 15000,
+        "bakso telor": 15000,
+        "mi ayam": 13000,
+        "nasi soto": 15000
+      };
+
+      let total = 0;
+      let detail = "";
+
+      const list = pesanan.split(",");
+
+      list.forEach(function(item){
+
+        item = item.trim().toLowerCase();
+
+        let namaMenu = item;
+        let jumlah = 1;
+
+        if(item.includes("x")){
+          const parts = item.split("x");
+          namaMenu = parts[0].trim();
+          jumlah = parseInt(parts[1]) || 1;
+        }
+
+        if(harga[namaMenu]){
+
+          let subtotal = harga[namaMenu] * jumlah;
+          total += subtotal;
+
+          detail += `✔️ ${namaMenu} x${jumlah} = Rp ${subtotal.toLocaleString("id-ID")}\n`;
+
+        } else if(item !== ""){
+
+          detail += `❓ ${item}\n`;
+
+        }
+
+      });
+
+      function rupiah(n){
+        return "Rp " + n.toLocaleString("id-ID");
+      }
+
+      // isi input total
+      totalInput.value = rupiah(total);
+
+      let pesan =
+`Halo kak 👋
+Saya mau pesan:
+
+👤 Nama: ${nama}
+🍜 Pesanan:
+${detail}
+💰 Total: ${rupiah(total)}
+📍 Alamat: ${alamat}
+
+Terima kasih 🙏`;
+
+      let wa = "https://wa.me/6289635900532?text=" + encodeURIComponent(pesan);
+
+      window.open(wa, "_blank");
+
+    });
+
+  }
 
 });
-</script>
-<script>
-  const tombolPesan = document.querySelectorAll(".btn-pesan");
-  const inputPesanan = document.getElementById("pesanan");
 
-  tombolPesan.forEach(function(btn) {
-    btn.addEventListener("click", function() {
-      const produk = this.getAttribute("data-produk");
-      inputPesanan.value = produk;
+/* ================= PRODUK ================= */
+function pilihproduk(nama){
 
-      // Scroll ke atas ke form
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  });
-</script>
-<script>
-  function pilihproduk(namaproduk) {
-    // Ambil input pesanan
-    const pesanan = document.getElementById("pesanan");
+  const input = document.getElementById("pesanan");
 
-    // Isi otomatis
-    pesanan.value = namaproduk;
+  if(input){
+    input.value = nama;
 
-    // Scroll ke atas ke form
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   }
-</script>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Hidayah Group</p>
-</footer>
+}
+</script>
+<script>
+let cart = {};
+
+function tambah(btn){
+
+  const card = btn.closest(".card");
+  const nama = card.dataset.nama;
+  const harga = parseInt(card.dataset.harga);
+
+  const qty = btn.parentElement.querySelector("span");
+
+  let jumlah = parseInt(qty.innerText);
+  jumlah++;
+
+  qty.innerText = jumlah;
+
+  cart[nama] = {
+    qty: jumlah,
+    harga: harga
+  };
+
+  updateForm();
+}
+
+function kurang(btn){
+
+  const card = btn.closest(".card");
+  const nama = card.dataset.nama;
+
+  const qty = btn.parentElement.querySelector("span");
+
+  let jumlah = parseInt(qty.innerText);
+
+  if(jumlah > 0){
+    jumlah--;
+    qty.innerText = jumlah;
+
+    if(jumlah === 0){
+      delete cart[nama];
+    } else {
+      cart[nama].qty = jumlah;
+    }
+  }
+
+  updateForm();
+}
+
+function updateForm(){
+
+  let text = "";
+  let total = 0;
+
+  for(let item in cart){
+
+    let data = cart[item];
+
+    let sub = data.qty * data.harga;
+
+    text += `${item} x${data.qty},\n `;
+
+    total += sub;
+  }
+
+  document.getElementById("pesanan").value = text;
+  document.getElementById("total").value =
+    "Rp " + total.toLocaleString("id-ID");
+}
+</script>
 
 </body>
 </html>
