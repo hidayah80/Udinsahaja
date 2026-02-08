@@ -29,6 +29,7 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
+         position: fixed;
          }
   
   nav a {
@@ -265,14 +266,16 @@ form textarea {
     ☰
   </div>
      <nav id="nav-menu">
-     <a href="#">Home</a>
+     <a href="home.html">Home</a>
      <a href="#">Produk</a>
      <a href="#">Kontak</a>
+     <a href="#">tentang kami</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+<br>
   <h3>Selamat Datang di Hidayah Bakso Solo</h3>
   <p>Murah • Aman • Terpercaya</p>
   <h2>Form Pemesanan</h2>
@@ -343,8 +346,18 @@ form textarea {
       </div>
 
     </div>
-
-  </div>
+      <!-- Mie Ayam -->
+    <div class="card" data-nama="mmie ayam" data-harga="15000">
+        <img src="mieayam.jpg">
+        <h3>Mie Ayam</h3>
+        <p>Rp 15.000</p>
+      <div class="qty">
+          <button class="qty-btn" onclick="kurang(this)">-</button>
+          <span>0</span>
+          <button class="qty-btn" onclick="tambah(this)">+</button>
+      </div>
+    </div>
+  
 
 </section>
 <!-- FOOTER -->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Judul halaman</title>
+    <style>
+          * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   }
+
+  html, body {
+             width: 100%;
+             max-width: 100%;
+             overflow-x: hidden;
+             background: #f2f2f2;
+             }
+
+  /* HEADER */
+  header {
+         background: #4facfe;
+         color: white;
+         padding: 15px 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         }
+         @keyframes muter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}  
+
+    @keyframes myAnimation {
+      0 % {
+        background-color: black;
+        top: 0px;
+        left: 0px;
+      }
+      25% {
+        background-color: green;
+        top: 200px;
+        left: 200px;
+      }
+      50% {
+        background-color: black;
+        top: 0px;
+        left: 200px;
+      }
+      75% {
+        background-color: green;
+        top: 200px;
+        left: 0px;
+      }
+      100% {
+        background-color: red;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    
+    div {
+      animation-name: myAnimation;
+      animation-duration: 2s;
+      /* try to change the value below with a number */
+      animation-iteration-count: infinite;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: gold;
+    }  
+    </style>
+</head>
+<body>
+   <!-- header -->
+   <header>
+       <h2>HOME</h2>
+   </header>
+   <h3>Hidayah bakso, Alun alun pangkalpinang</h3>
+   <a href="https://maps.app.goo.gl/pba77AKAUSQq9tHr9"><b>LIHAT DI SINI</b></a>
+   <div></div>
+</body>
+</html>
