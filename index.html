@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Udin Store</title>
+  <title>Hidayah Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -20,28 +20,75 @@
              overflow-x: hidden;
              background: #f2f2f2;
              }
+/* HEADER */
+.topbar {
+  background: #4facfe;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  /* HEADER */
-  header {
-         background: #4facfe;
-         color: white;
-         padding: 15px 20px;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         position: fixed;
-         }
-  
-  nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 15px;
-        font-size: 14px;
-        }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  nav a:hover {
-            text-decoration: underline;
-             }
+/* Menu desktop */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hamburger */
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* CSS Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  transition: transform 0.3s ease; /* animasi slide */
+  z-index: 999;
+}
+
+.navbar .menu {
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.navbar.active .menu {
+  display: block;
+}
+
+.navbar.slide-up {
+  transform: translateY(-100%); /* slide naik saat close */
+}
+ 
 
   /* HERO */
   .hero {
@@ -117,111 +164,11 @@
        color: white;
        border-radius: 15px;
        text-decoration: none;
-       font-size: 12px;
-       }
+       font-size: 12px;}
 
-/* HAMBURGER */
-.menu-toggle {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-            }
-
-/* MODE HP */
-@media (max-width: 768px) {
-
-  nav {
-      position: fixed;
-      top: 60px;
-      right: 0;
-      background: #4facfe;
-      width: 200px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      transform: translateX(100%);
-      transition: 0.3s;
-     }
-
-  nav.active {
-    transform: translateX(0);
-  }
-
-  nav a {
-    margin: 10px;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-}
-}
-
-nav.active {
-  transform: translateX(0);
-}
-    flex-direction: column;
-  }
-
-  nav a {
-    margin: 10px;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav.active {
-    display: flex;
-  }
-.menu-toggle {
-  font-size: 26px;
-  cursor: pointer;
-  display: none;
-  color: white;
-}
-
-/* Menu utama */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-/* Mode HP */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #2196f3;
-    width: 200px;
-    flex-direction: column;
-    padding: 15px;
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu li a {
-    color: white;
-    padding: 10px;
-    display: block;
-  }
- 
- 
+/* Mobile */
+@media (max-width: 768px){
+ }
 form {
   background: white;
   padding: 15px;
@@ -253,43 +200,60 @@ form textarea {
 .qty-btn:active {
   transform: scale(0.95);
 }
+@media (max-width:768px){
+
+  .nav-menu{
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#4facfe;
+    width:200px;
+    flex-direction:column;
+    padding:15px;
+    display:none;
+  }
+
+  .nav-menu.active{
+    display:flex;
+  }
+
+}
 
   </style>
 </head>
-
-<body>
-    
-<header>
+</html>
+  
+<!-- Contoh HTML Navbar -->
+<header class="topbar">
   <h2>HIDAYAH BAKSO SOLO</h2>
-  <!-- Tombol Hamburger -->
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
-     <nav id="nav-menu">
-     <a href="home.html">Home</a>
-     <a href="#">Produk</a>
-     <a href="#">Kontak</a>
-     <a href="#">tentang kami</a>
-  </nav>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#produk">Produk</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<br>
-  <h3>Selamat Datang di Hidayah Bakso Solo</h3>
-  <p>Murah • Aman • Terpercaya</p>
-  <h2>Form Pemesanan</h2>
+    <br>
+      <h4>Selamat Datang di Hidayah Bakso Solo
+         </h4>
+         <p>• Murah • Aman • Terpercaya</p>
+          <h2>Form Pemesanan</h2>
+            <form id="orderForm">
+        <input type="text" id="nama"  placeholder="Nama"  required>
+            <br><br>
+       <input type="text" id="pesanan" placeholder="Pesanan" required><br><br>
 
-<form id="orderForm">
-
-  <input type="text" id="nama" placeholder="Nama" required><br><br>
-
-  <input type="text" id="pesanan" placeholder="Pesanan" required><br><br>
-
-  <textarea id="alamat" placeholder="Alamat" required></textarea><br><br>
-  <input type="text" id="total" placeholder="Total Harga" readonly><br><br>
-
-  <button type="submit" class="btn">Kirim Pesanan</button>
+       <textarea id="alamat" placeholder="Alamat" required>
+       </textarea>
+          <br><br>
+      <input type="text" id="total" placeholder="Total Harga" readonly>
+   <br><br>
+      <button type="submit" class="btn">Kirim Pesanan</button>
 
 </form>
 </section>
@@ -297,73 +261,63 @@ form textarea {
 <!-- PRODUK -->
 <section class="container">
 
-  <h2>Produk Kami</h2>
-  <br>
+  <h2>Produk Kami</h2><br>
+     <div class="products">
 
-  <div class="products">
 
     <!-- Bakso Super -->
     <div class="card" data-nama="bakso super" data-harga="25000">
-
-      <img src="baksosuper.jpg">
-      <h3>Bakso Super</h3>
-      <p>Rp 25.000</p>
+          <img src="baksosuper.jpg">
+            <h3>Bakso Super</h3>
+             <p>Rp 25.000</p>
 
       <div class="qty">
         <button class="qty-btn" onclick="kurang(this)">-</button>
         <span>0</span>
         <button class="qty-btn" onclick="tambah(this)">+</button>
-      </div>
+      </div></div>
 
-    </div>
 
     <!-- Bakso Urat -->
     <div class="card" data-nama="bakso urat" data-harga="15000">
-
-      <img src="baksourat.jpg">
-      <h3>Bakso Urat</h3>
-      <p>Rp 15.000</p>
-
-      <div class="qty">
+          <img src="baksourat.jpg">
+           <h3>Bakso Urat</h3>
+            <p>Rp 15.000</p>
+   <div class="qty">
         <button class="qty-btn" onclick="kurang(this)">-</button>
         <span>0</span>
         <button class="qty-btn" onclick="tambah(this)">+</button>
-      </div>
+      </div></div>
 
-    </div>
 
     <!-- Bakso Telor -->
-    <div class="card" data-nama="bakso telor" data-harga="15000">
-
-      <img src="baksotelor.jpg">
-      <h3>Bakso Telor</h3>
-      <p>Rp 15.000</p>
-
-      <div class="qty">
-        <button class="qty-btn" onclick="kurang(this)">-</button>
+   <div class="card" data-nama="bakso telor" data-harga="15000">
+          <img src="baksotelor.jpg">
+           <h3>Bakso Telor</h3>
+            <p>Rp 15.000</p>
+    <div class="qty">
+         <button class="qty-btn" onclick="kurang(this)">-</button>
         <span>0</span>
         <button class="qty-btn" onclick="tambah(this)">+</button>
-      </div>
-
-    </div>
-      <!-- Mie Ayam -->
+      </div></div>
+      
+      
+    <!-- Mie Ayam -->
     <div class="card" data-nama="mmie ayam" data-harga="15000">
         <img src="mieayam.jpg">
-        <h3>Mie Ayam</h3>
-        <p>Rp 15.000</p>
-      <div class="qty">
-          <button class="qty-btn" onclick="kurang(this)">-</button>
+          <h3>Mie Ayam</h3>
+           <p>Rp 15.000</p>
+    <div class="qty">
+         <button class="qty-btn" onclick="kurang(this)">-</button>
           <span>0</span>
           <button class="qty-btn" onclick="tambah(this)">+</button>
-      </div>
-    </div>
-  
-
+      </div> </div>
 </section>
+
+
 <!-- FOOTER -->
-<footer>
-  <p>© 2026 Hidayah Group</p>
-</footer>
+<footer><p>© 2026 Hidayah Group</p></footer>
+
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -545,6 +499,21 @@ function updateForm(){
     "Rp " + total.toLocaleString("id-ID");
 }
 </script>
+<script>
+let lastScroll = 0;
 
+window.addEventListener("scroll", function(){
+
+  const nav = document.getElementById("nav-menu");
+
+  if(!nav) return;
+
+  // Kalau navbar lagi terbuka → tutup
+  if(nav.classList.contains("active")){
+    nav.classList.remove("active");
+  }
+
+});
+</script>
 </body>
 </html>
